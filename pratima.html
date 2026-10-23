@@ -305,34 +305,41 @@
         </section>
 
         <!-- Feature 4: Virtual Gift Boxes (Restored) -->
-        <section class="glass rounded-3xl p-8 mb-14 text-center border border-white shadow-xl">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 font-fun mb-2">🎁 Pick a Birthday Gift Box</h2>
-            <p class="text-gray-600 text-sm mb-6">Pratima, click on any gift box below to unlock a sweet coupon!</p>
+<!-- Feature 4: Virtual Gift Boxes (Message Reveals Directly Inside Each Box) -->
+<section class="glass rounded-3xl p-8 mb-14 text-center border border-white shadow-xl">
+    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 font-fun mb-2">🎁 Pick a Birthday Gift Box</h2>
+    <p class="text-gray-600 text-sm mb-6">Pratima, click on any gift box below to unlock a sweet coupon inside!</p>
 
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-xl mx-auto">
-                <!-- Gift Box 1 -->
-                <div id="gift-1" onclick="openGift(1, '🎟️ Unlimited Warm Hugs Coupon', 'Valid anytime, anywhere, with no expiration date forever!')" class="bg-white/80 p-6 rounded-2xl border-2 border-pink-200 shadow-sm cursor-pointer hover:scale-105 active:scale-95 transition-all">
-                    <span class="text-5xl block mb-2">🎁</span>
-                    <p class="font-bold text-pink-600 font-fun text-sm">Gift Box 1</p>
-                </div>
-                <!-- Gift Box 2 -->
-                <div id="gift-2" onclick="openGift(2, '🍨 Favorite Dinner & Dessert Date', 'Your absolute favorite food on me whenever you wish!')" class="bg-white/80 p-6 rounded-2xl border-2 border-pink-200 shadow-sm cursor-pointer hover:scale-105 active:scale-95 transition-all">
-                    <span class="text-5xl block mb-2">🎀</span>
-                    <p class="font-bold text-pink-600 font-fun text-sm">Gift Box 2</p>
-                </div>
-                <!-- Gift Box 3 -->
-                <div id="gift-3" onclick="openGift(3, '👑 Queen For The Day Coupon', 'Whatever Pratima says today goes! Your wish is my command!')" class="bg-white/80 p-6 rounded-2xl border-2 border-pink-200 shadow-sm cursor-pointer hover:scale-105 active:scale-95 transition-all">
-                    <span class="text-5xl block mb-2">🛍️</span>
-                    <p class="font-bold text-pink-600 font-fun text-sm">Gift Box 3</p>
-                </div>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
+        <!-- Gift Box 1 -->
+        <div id="gift-1" onclick="openGiftInline(1, '🎟️ Unlimited Warm Hugs Coupon', 'Valid anytime, anywhere, with no expiration date forever!')" class="bg-white/80 p-6 rounded-2xl border-2 border-pink-200 shadow-sm cursor-pointer hover:scale-105 active:scale-95 transition-all flex flex-col justify-between items-center min-h-[220px]">
+            <div id="gift-content-1" class="w-full flex flex-col items-center justify-center my-auto">
+                <span class="text-6xl block mb-3 animate-bounce">🎁</span>
+                <p class="font-bold text-pink-600 font-fun text-base">Gift Box 1</p>
+                <span class="text-xs text-pink-400 mt-1">Tap to Open</span>
             </div>
+        </div>
 
-            <!-- Gift Modal Reveal Display -->
-            <div id="gift-modal" class="hidden mt-6 p-5 bg-pink-100/90 rounded-2xl border border-pink-300 max-w-md mx-auto text-center animate-bounce">
-                <h4 id="gift-title" class="text-xl font-bold text-pink-700 font-cursive mb-1"></h4>
-                <p id="gift-desc" class="text-sm text-gray-700"></p>
+        <!-- Gift Box 2 -->
+        <div id="gift-2" onclick="openGiftInline(2, '🍨 Favorite Dinner & Dessert Date', 'Your absolute favorite food on me whenever you wish!')" class="bg-white/80 p-6 rounded-2xl border-2 border-pink-200 shadow-sm cursor-pointer hover:scale-105 active:scale-95 transition-all flex flex-col justify-between items-center min-h-[220px]">
+            <div id="gift-content-2" class="w-full flex flex-col items-center justify-center my-auto">
+                <span class="text-6xl block mb-3 animate-bounce">🎀</span>
+                <p class="font-bold text-pink-600 font-fun text-base">Gift Box 2</p>
+                <span class="text-xs text-pink-400 mt-1">Tap to Open</span>
             </div>
-        </section>
+        </div>
+
+        <!-- Gift Box 3 -->
+        <div id="gift-3" onclick="openGiftInline(3, '👑 Queen For The Day Coupon', 'Whatever Pratima says today goes! Your wish is my command!')" class="bg-white/80 p-6 rounded-2xl border-2 border-pink-200 shadow-sm cursor-pointer hover:scale-105 active:scale-95 transition-all flex flex-col justify-between items-center min-h-[220px]">
+            <div id="gift-content-3" class="w-full flex flex-col items-center justify-center my-auto">
+                <span class="text-6xl block mb-3 animate-bounce">🛍️</span>
+                <p class="font-bold text-pink-600 font-fun text-base">Gift Box 3</p>
+                <span class="text-xs text-pink-400 mt-1">Tap to Open</span>
+            </div>
+        </div>
+    </div>
+</section>
+
 
         <!-- Feature 5: Multi-Candle Birthday Cake Blow-Out -->
         <section class="glass rounded-3xl p-8 mb-14 text-center border border-white shadow-xl relative overflow-hidden">
@@ -599,12 +606,21 @@
         }
 
         // 6. Virtual Gift Box Unlocker
-        function openGift(id, title, desc) {
-            const modal = document.getElementById('gift-modal');
-            document.getElementById('gift-title').textContent = title;
-            document.getElementById('gift-desc').textContent = desc;
-
-            modal.classList.remove('hidden');
+        function openGiftInline(id, title, desc) {
+            const cardBox = document.getElementById(`gift-${id}`);
+            const contentContainer = document.getElementById(`gift-content-${id}`);
+        
+            // Update card styling to highlighted state
+            cardBox.classList.remove('bg-white/80', 'hover:scale-105');
+            cardBox.classList.add('bg-pink-100/90', 'border-pink-400', 'ring-2', 'ring-pink-300');
+        
+            // Insert revealed message directly inside the clicked box
+            contentContainer.innerHTML = `
+                <span class="text-4xl block mb-2">✨</span>
+                <h4 class="font-bold text-pink-700 font-cursive text-lg leading-tight mb-1">${title}</h4>
+                <p class="text-xs text-gray-700 font-light leading-relaxed mt-1">${desc}</p>
+            `;
+        
             triggerMiniConfetti();
         }
 
