@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Seema! 💖</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Google Fonts: Fredoka & Quicksand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pastelPink: '#FFD1DC',
+            pastelPurple: '#E8DFF5',
+            pastelRose: '#FFE5EC',
+            cuteRose: '#FF4081',
+            softGold: '#F3E5AB',
+          },
+          fontFamily: {
+            fredoka: ['Fredoka', 'sans-serif'],
+            quicksand: ['Quicksand', 'sans-serif'],
+          },
+          animation: {
+            'float': 'float 4s ease-in-out infinite',
+            'bounce-slow': 'bounce 2.5s infinite',
+            'pulse-glow': 'pulseGlow 2s infinite alternate',
+            'wiggle': 'wiggle 0.6s ease-in-out infinite',
+            'spin-slow': 'spin 14s linear infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-12px)' },
+            },
+            pulseGlow: {
+              '0%': { filter: 'drop-shadow(0 0 5px rgba(255, 64, 129, 0.4))' },
+              '100%': { filter: 'drop-shadow(0 0 20px rgba(255, 64, 129, 0.9))' },
+            },
+            wiggle: {
+              '0%, 100%': { transform: 'rotate(-3deg)' },
+              '50%': { transform: 'rotate(3deg)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 50%, #ede7f6 100%);
+      overflow-x: hidden;
+      user-select: none;
+    }
+    .font-cute {
+      font-family: 'Fredoka', cursive;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 2px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 8px 32px 0 rgba(255, 182, 193, 0.25);
+    }
+    .glass-card-darker {
+      background: rgba(255, 240, 245, 0.92);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 192, 203, 0.6);
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #fce4ec;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #ff80ab;
+      border-radius: 10px;
+    }
+
+    /* REALISTIC CANDLE FLAME & GLOW */
+    .flame {
+      width: 16px;
+      height: 26px;
+      background: radial-gradient(ellipse at bottom, #ffffff 0%, #ffeb3b 25%, #ff9800 65%, #f44336 100%);
+      border-radius: 50% 50% 20% 20%;
+      animation: flicker 0.12s infinite alternate ease-in-out;
+      cursor: pointer;
+      box-shadow: 0 0 15px #ff9800, 0 0 25px #ffeb3b, 0 -5px 10px rgba(255, 235, 59, 0.8);
+      transform-origin: center bottom;
+    }
+    @keyframes flicker {
+      0% { transform: scale(1) rotate(-2deg); filter: drop-shadow(0 0 8px #ffeb3b); }
+      100% { transform: scale(1.15) rotate(2deg); filter: drop-shadow(0 0 15px #ff9800); }
+    }
+    .smoke {
+      width: 8px;
+      height: 8px;
+      background: rgba(180, 180, 180, 0.8);
+      border-radius: 50%;
+      animation: rise 1.2s forwards ease-out;
+    }
+    @keyframes rise {
+      0% { opacity: 0.9; transform: translateY(0) scale(1); }
+      100% { opacity: 0; transform: translateY(-40px) scale(3); }
+    }
+
+    /* 3D Cake Layer Shadows & Details */
+    .cake-layer-3d {
+      box-shadow: inset 0 -10px 12px rgba(0,0,0,0.06), 0 8px 15px rgba(255, 105, 180, 0.2);
+    }
+    .frosting-drip {
+      background: #fff0f5;
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 3px 5px rgba(255, 182, 193, 0.4);
+    }
+
+    /* Vinyl Player Styling */
+    .vinyl-disk {
+      background: radial-gradient(circle, #2a2a2a 0%, #111111 60%, #000000 100%);
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+    .vinyl-arm {
+      transform-origin: top right;
+      transition: transform 0.5s ease;
+    }
+
+    /* Equalizer Bar Animation */
+    @keyframes eqBar {
+      0%, 100% { height: 6px; }
+      50% { height: 28px; }
+    }
+    .eq-bar-active {
+      animation: eqBar 0.5s infinite ease-in-out alternate;
+    }
+
+    /* Scanner Fill Animation */
+    .scan-bar-fill {
+      transition: width 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-slate-800 relative pb-16">
+
+  <!-- Background Animated Particles Canvas -->
+  <canvas id="bgCanvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+  <!-- Confetti Canvas -->
+  <canvas id="confettiCanvas" class="fixed inset-0 pointer-events-none z-50"></canvas>
+
+  <!-- TOP BAR / FLOATING CONTROLS -->
+  <header class="fixed top-3 left-0 right-0 z-40 px-4 max-w-5xl mx-auto flex justify-between items-center pointer-events-none">
+    <div class="glass-card px-4 py-2 rounded-full flex items-center gap-2 pointer-events-auto shadow-md">
+      <span class="text-xl">👑</span>
+      <span class="font-cute text-pink-600 text-sm md:text-base">Seema's B'day Celebration</span>
+    </div>
+
+    <div class="flex items-center gap-2 pointer-events-auto">
+      <button id="confettiBtn" title="Launch Party Fireworks!" class="glass-card hover:bg-pink-100 active:scale-95 transition p-3 rounded-full text-pink-600 shadow-md flex items-center justify-center">
+        <i data-lucide="sparkles" class="w-5 h-5"></i>
+      </button>
+      <button id="soundToggleBtn" title="Toggle Sound FX & Music" class="glass-card hover:bg-pink-100 active:scale-95 transition p-3 rounded-full text-pink-600 shadow-md flex items-center justify-center relative">
+        <i id="soundIcon" data-lucide="volume-2" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="relative z-10 max-w-4xl mx-auto px-4 pt-20 space-y-14">
+
+    <!-- HERO SECTION: CUTEST 3D CAKE & GREETING -->
+    <section class="text-center pt-2 flex flex-col items-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-100 border border-pink-300 text-pink-700 text-sm font-semibold mb-3 shadow-sm animate-bounce-slow">
+        <i data-lucide="calendar" class="w-4 h-4"></i> Special Day: October 25th 🌸
+      </div>
+
+      <h1 class="text-4xl md:text-6xl font-cute text-pink-600 tracking-wide mb-2 drop-shadow-sm">
+        Happy Birthday, <span class="text-purple-600 underline decoration-pink-300">Seema!</span> ✨
+      </h1>
+      <p class="text-slate-600 text-base md:text-lg max-w-lg mb-4">
+        To our favorite cute, smart, stylish & delightfully confused queen! Blow out the candles! 💖
+      </p>
+
+      <!-- 3D-STYLED PASTEL BIRTHDAY CAKE -->
+      <div class="relative my-8 select-none flex flex-col items-center scale-95 md:scale-105 transition-transform">
+
+        <!-- Glowing Candles Row -->
+        <div id="candlesContainer" class="flex gap-8 z-30 mb-[-14px] px-2">
+          <!-- 4 Animated Candle Sticks -->
+          <div class="candle-wrapper flex flex-col items-center cursor-pointer group" onclick="extinguishCandle(0)">
+            <div id="flame-0" class="flame group-hover:scale-125 transition-transform"></div>
+            <div id="smoke-0"></div>
+            <div class="w-3.5 h-14 bg-gradient-to-b from-yellow-200 via-pink-300 to-pink-400 rounded-t-full shadow-md border border-pink-300 relative">
+              <div class="w-full h-1 bg-white/60 mt-2"></div>
+              <div class="w-full h-1 bg-white/60 mt-2"></div>
+            </div>
+          </div>
+          <div class="candle-wrapper flex flex-col items-center cursor-pointer group" onclick="extinguishCandle(1)">
+            <div id="flame-1" class="flame group-hover:scale-125 transition-transform"></div>
+            <div id="smoke-1"></div>
+            <div class="w-3.5 h-16 bg-gradient-to-b from-purple-200 via-purple-300 to-pink-400 rounded-t-full shadow-md border border-purple-300 relative">
+              <div class="w-full h-1 bg-white/60 mt-2"></div>
+              <div class="w-full h-1 bg-white/60 mt-2"></div>
+            </div>
+          </div>
+          <div class="candle-wrapper flex flex-col items-center cursor-pointer group" onclick="extinguishCandle(2)">
+            <div id="flame-2" class="flame group-hover:scale-125 transition-transform"></div>
+            <div id="smoke-2"></div>
+            <div class="w-3.5 h-16 bg-gradient-to-b from-rose-200 via-pink-300 to-rose-400 rounded-t-full shadow-md border border-rose-300 relative">
+              <div class="w-full h-1 bg-white/60 mt-2"></div>
+              <div class="w-full h-1 bg-white/60 mt-2"></div>
+            </div>
+          </div>
+          <div class="candle-wrapper flex flex-col items-center cursor-pointer group" onclick="extinguishCandle(3)">
+            <div id="flame-3" class="flame group-hover:scale-125 transition-transform"></div>
+            <div id="smoke-3"></div>
+            <div class="w-3.5 h-14 bg-gradient-to-b from-yellow-200 via-amber-300 to-pink-400 rounded-t-full shadow-md border border-yellow-300 relative">
+              <div class="w-full h-1 bg-white/60 mt-2"></div>
+              <div class="w-full h-1 bg-white/60 mt-2"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cake Structure -->
+        <div class="relative w-72 md:w-88 flex flex-col items-center">
+
+          <!-- TOP LAYER (Creamy Pink Frosting) -->
+          <div class="w-56 md:w-64 h-20 bg-gradient-to-r from-pink-300 via-rose-200 to-pink-300 rounded-t-3xl cake-layer-3d relative z-20 flex flex-col items-center justify-between pt-2 border-t-2 border-pink-100">
+            <!-- Cherries on Top -->
+            <div class="absolute -top-3 inset-x-0 flex justify-around px-6">
+              <span class="text-lg filter drop-shadow-sm">🍒</span>
+              <span class="text-lg filter drop-shadow-sm">🍒</span>
+              <span class="text-lg filter drop-shadow-sm">🍒</span>
+              <span class="text-lg filter drop-shadow-sm">🍒</span>
+            </div>
+
+            <!-- Cute Face Expression -->
+            <div class="flex items-center gap-4 mt-3">
+              <div class="w-3 h-3 bg-pink-800 rounded-full animate-bounce"></div>
+              <div class="w-4 h-2 border-b-2 border-pink-800 rounded-full"></div>
+              <div class="w-3 h-3 bg-pink-800 rounded-full animate-bounce"></div>
+            </div>
+
+            <!-- Drip Cream -->
+            <div class="w-full flex justify-between px-1 mb-[-8px]">
+              <div class="w-6 h-5 frosting-drip"></div>
+              <div class="w-8 h-7 frosting-drip"></div>
+              <div class="w-5 h-4 frosting-drip"></div>
+              <div class="w-9 h-8 frosting-drip"></div>
+              <div class="w-6 h-5 frosting-drip"></div>
+            </div>
+          </div>
+
+          <!-- MIDDLE LAYER (Lavender Vanilla Cream) -->
+          <div class="w-68 md:w-76 h-20 bg-gradient-to-r from-purple-200 via-purple-100 to-purple-200 border-t border-purple-300 cake-layer-3d relative z-10 flex items-center justify-between px-6">
+            <span class="text-xs">✨</span>
+            <span class="text-xs text-pink-400 font-bold">🍓</span>
+            <span class="text-xs text-amber-500 font-bold">★</span>
+            <span class="font-cute text-purple-700 text-sm tracking-wider uppercase bg-white/70 px-3 py-1 rounded-full shadow-inner">Seema 👑</span>
+            <span class="text-xs text-amber-500 font-bold">★</span>
+            <span class="text-xs text-pink-400 font-bold">🍓</span>
+            <span class="text-xs">✨</span>
+          </div>
+
+          <!-- BOTTOM LAYER (Golden Vanilla Sponge) -->
+          <div class="w-80 md:w-92 h-24 bg-gradient-to-r from-amber-200 via-orange-100 to-amber-200 rounded-b-3xl cake-layer-3d relative flex items-center justify-around px-8 border-t border-amber-300">
+            <span class="text-base">💖</span>
+            <span class="text-base">🌸</span>
+            <span class="text-base">🎀</span>
+            <span class="text-base">💖</span>
+            <span class="text-base">🌸</span>
+            <span class="text-base">🎀</span>
+          </div>
+
+          <!-- Base Cake Stand Plate -->
+          <div class="w-96 md:w-104 h-6 bg-slate-200 rounded-full shadow-2xl border-2 border-slate-300 mt-[-6px] z-0 flex items-center justify-center">
+            <div class="w-full h-1 bg-white/60 mx-6 rounded-full"></div>
+          </div>
+        </div>
+
+        <!-- Candle Blow Status -->
+        <div id="candleStatus" class="mt-6 text-xs md:text-sm font-semibold text-pink-600 bg-white/80 px-5 py-2 rounded-full shadow-md border border-pink-200">
+          Tap on each candle flame to blow it out! 🕯️ (4 remaining)
+        </div>
+      </div>
+
+      <!-- Celebration Message Box -->
+      <div id="unlockedMessage" class="hidden transition-all duration-500 transform scale-95 glass-card p-6 rounded-3xl max-w-xl text-center border-2 border-pink-300 mt-2 shadow-xl">
+        <h2 class="text-2xl font-cute text-pink-600 mb-2">🎉 Birthday Wishes Granted For Seema! 🎉</h2>
+        <p class="text-slate-700 text-sm md:text-base">
+          Happy birthday! Thanks for being the cooler sister, the nicer sister, and the one who lets us get away with things. Explore your custom star capsule & jukebox below! 🥳
+        </p>
+      </div>
+    </section>
+
+    <!-- FEATURE 1: SEEMA'S MAGICAL SISTER TIME CAPSULE & WISHING STAR (REWRITTEN FUNNY MESSAGES) -->
+    <section class="glass-card p-6 md:p-8 rounded-3xl shadow-lg border border-indigo-200 text-center space-y-6 relative overflow-hidden bg-gradient-to-b from-slate-900/90 via-indigo-950/80 to-purple-950/90 text-white">
+      <div>
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/30 border border-indigo-300/40 text-indigo-200 text-xs font-bold uppercase tracking-wider mb-2">
+          ✨ Seema's Personal Galaxy
+        </div>
+        <h2 class="text-3xl font-cute text-pink-300 flex items-center justify-center gap-2">
+          🌟 Seema's Time Capsule & Wishing Star
+        </h2>
+        <p class="text-indigo-200/80 text-sm mt-1">Tap twinkling stars to unlock cute & funny secrets about Seema's iconic traits!</p>
+      </div>
+
+      <!-- Interactive Canvas Galaxy Box -->
+      <div class="relative w-full h-64 md:h-72 rounded-2xl overflow-hidden border border-indigo-400/40 shadow-inner bg-slate-950 flex flex-col justify-between p-4">
+        <canvas id="skyCanvas" class="absolute inset-0 w-full h-full cursor-pointer z-0"></canvas>
+        <div class="relative z-10 flex justify-between items-center text-xs text-indigo-300 pointer-events-none">
+          <span class="bg-indigo-900/60 px-3 py-1 rounded-full border border-indigo-400/30">✨ 5 Confused-Girl Stars</span>
+          <span id="unlockedStarCount" class="bg-pink-900/60 px-3 py-1 rounded-full border border-pink-400/30 text-pink-200">Stars Unlocked: 0 / 5</span>
+        </div>
+
+        <!-- Revealed Star Capsule Message Box -->
+        <div id="starCapsuleModal" class="relative z-10 glass-card-darker p-4 rounded-xl text-slate-800 text-left max-w-lg mx-auto border-2 border-amber-300 hidden transition-all duration-300">
+          <div class="flex justify-between items-center border-b border-pink-200 pb-1 mb-2">
+            <span id="starModalTitle" class="font-cute text-pink-600 text-sm flex items-center gap-1">⭐ Star Secret</span>
+            <button onclick="closeStarModal()" class="text-xs text-slate-400 hover:text-slate-700">✕ Close</button>
+          </div>
+          <p id="starModalText" class="text-xs md:text-sm font-medium italic text-slate-700 leading-relaxed"></p>
+        </div>
+
+        <div class="relative z-10 text-center text-indigo-300/70 text-[11px] pointer-events-none">
+          Click any glowing star in the night sky above 👆
+        </div>
+      </div>
+
+      <!-- Star Launcher Form -->
+      <div class="glass-card-darker p-4 rounded-2xl text-slate-800 max-w-lg mx-auto border border-pink-200 space-y-3">
+        <h3 class="font-cute text-pink-600 text-base text-center flex items-center justify-center gap-1.5">
+          🚀 Wish Launcher For Seema
+        </h3>
+        <div class="flex gap-2">
+          <input id="wishInput" type="text" placeholder="Type a wish for Seema (e.g. decision clarity!)..." class="flex-1 px-4 py-2 text-xs md:text-sm rounded-full border border-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-400 bg-white/90">
+          <button onclick="launchWish()" class="px-5 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-cute text-xs md:text-sm rounded-full shadow hover:scale-105 active:scale-95 transition flex items-center gap-1">
+            Launch 💫
+          </button>
+        </div>
+        <p id="wishStatus" class="text-[11px] text-purple-700 text-center hidden font-medium">Your wish for Seema was launched into the night sky with shooting star dust! ✨</p>
+      </div>
+    </section>
+
+    <!-- FEATURE 2: INTERACTIVE SISTER MUSIC BOX & AUDIO JUKEBOX -->
+    <section class="glass-card p-6 md:p-8 rounded-3xl shadow-lg border border-pink-200 text-center space-y-6">
+      <div>
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-100 border border-pink-300 text-pink-700 text-xs font-bold uppercase tracking-wider mb-2">
+          🎵 Web Audio Synthesizer
+        </div>
+        <h2 class="text-3xl font-cute text-pink-600 flex items-center justify-center gap-2">
+          📻 Seema's Retro Sister Music Box
+        </h2>
+        <p class="text-slate-600 text-sm mt-1">Listen to sweet synthesized tracks while Seema tries to decide what to wear!</p>
+      </div>
+
+      <!-- Jukebox Player Unit -->
+      <div class="max-w-md mx-auto glass-card-darker p-6 rounded-3xl border-2 border-pink-300 shadow-xl space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-red-400"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+            <span class="w-3 h-3 rounded-full bg-green-400"></span>
+          </div>
+          <span id="currentTrackTitle" class="font-cute text-pink-600 text-xs md:text-sm bg-white/80 px-3 py-1 rounded-full border border-pink-200">Track 1: Happy Birthday Lofi 🎂</span>
+        </div>
+
+        <!-- Animated Vinyl Deck -->
+        <div class="relative w-44 h-44 mx-auto flex items-center justify-center">
+          <div id="vinylRecord" class="w-40 h-40 rounded-full vinyl-disk flex items-center justify-center relative shadow-2xl">
+            <div class="w-14 h-14 rounded-full bg-pink-400 border-4 border-pink-200 flex items-center justify-center text-white text-xs font-bold font-cute">
+              SEEMA
+            </div>
+          </div>
+          <!-- Tonearm -->
+          <div id="toneArm" class="absolute top-1 right-2 w-16 h-20 pointer-events-none vinyl-arm origin-top-right transform rotate-12">
+            <div class="w-2 h-16 bg-slate-400 mx-auto rounded-full shadow-md"></div>
+            <div class="w-4 h-4 bg-pink-500 rounded-sm -mt-2 mx-auto border border-white"></div>
+          </div>
+        </div>
+
+        <!-- Equalizer Bars -->
+        <div class="flex justify-center items-end gap-1.5 h-8 pt-2">
+          <div id="eq-1" class="w-2 bg-pink-400 rounded-t h-2"></div>
+          <div id="eq-2" class="w-2 bg-purple-400 rounded-t h-2"></div>
+          <div id="eq-3" class="w-2 bg-rose-400 rounded-t h-2"></div>
+          <div id="eq-4" class="w-2 bg-amber-400 rounded-t h-2"></div>
+          <div id="eq-5" class="w-2 bg-indigo-400 rounded-t h-2"></div>
+        </div>
+
+        <!-- Track Selector Grid -->
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <button onclick="selectTrack(0)" id="trackBtn-0" class="p-2 rounded-xl border border-pink-300 bg-pink-200 text-pink-800 font-bold hover:bg-pink-300 transition">🎂 Happy B'day Lofi</button>
+          <button onclick="selectTrack(1)" id="trackBtn-1" class="p-2 rounded-xl border border-purple-200 bg-white/80 text-purple-700 font-semibold hover:bg-purple-100 transition">🌸 Sister Lullaby</button>
+          <button onclick="selectTrack(2)" id="trackBtn-2" class="p-2 rounded-xl border border-rose-200 bg-white/80 text-rose-700 font-semibold hover:bg-rose-100 transition">🎉 Upbeat Party</button>
+          <button onclick="selectTrack(3)" id="trackBtn-3" class="p-2 rounded-xl border border-amber-200 bg-white/80 text-amber-700 font-semibold hover:bg-amber-100 transition">🌅 Chill Sunset</button>
+        </div>
+
+        <!-- Master Play / Pause -->
+        <div class="pt-1">
+          <button id="musicBoxPlayBtn" onclick="toggleJukebox()" class="px-8 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-cute text-sm rounded-full shadow-lg hover:scale-105 active:scale-95 transition flex items-center justify-center gap-2 mx-auto">
+            <i id="playPauseIcon" data-lucide="play" class="w-4 h-4"></i> <span id="playPauseText">Play Music Box</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: TROPHY & AWARD CEREMONY ROOM -->
+    <section class="glass-card p-6 md:p-8 rounded-3xl shadow-lg border border-pink-200 text-center space-y-6">
+      <div>
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 border border-amber-300 text-amber-800 text-xs font-bold uppercase tracking-wider mb-2">
+          🏆 Official Hall of Fame
+        </div>
+        <h2 class="text-3xl font-cute text-pink-600 flex items-center justify-center gap-2">
+          👑 Seema's Golden Trophy Room
+        </h2>
+        <p class="text-slate-600 text-sm mt-1">Tap each official award to claim your trophy & read your customized citation!</p>
+      </div>
+
+      <!-- Trophies Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
+
+        <!-- Trophy 1 -->
+        <div onclick="claimTrophy(1)" id="trophy-card-1" class="glass-card-darker p-4 rounded-2xl border border-amber-200 cursor-pointer hover:scale-102 active:scale-98 transition flex items-start gap-3 relative overflow-hidden group">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-300 to-yellow-100 flex items-center justify-center text-2xl shadow-md flex-shrink-0 group-hover:rotate-12 transition-transform">
+            👗
+          </div>
+          <div>
+            <span id="trophy-badge-1" class="text-[10px] bg-amber-200 text-amber-800 font-bold px-2 py-0.5 rounded-full uppercase">Tap to Claim</span>
+            <h3 class="font-cute text-pink-700 text-base mt-1">Well-Dressed Fashion Icon</h3>
+            <p class="text-slate-500 text-xs mt-0.5">Looking like heroine even in casual clothes!</p>
+          </div>
+        </div>
+
+        <!-- Trophy 2 -->
+        <div onclick="claimTrophy(2)" id="trophy-card-2" class="glass-card-darker p-4 rounded-2xl border border-purple-200 cursor-pointer hover:scale-102 active:scale-98 transition flex items-start gap-3 relative overflow-hidden group">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-purple-300 to-pink-100 flex items-center justify-center text-2xl shadow-md flex-shrink-0 group-hover:rotate-12 transition-transform">
+            🤯
+          </div>
+          <div>
+            <span id="trophy-badge-2" class="text-[10px] bg-purple-200 text-purple-800 font-bold px-2 py-0.5 rounded-full uppercase">Tap to Claim</span>
+            <h3 class="font-cute text-purple-700 text-base mt-1">Cutest Confused Girl</h3>
+            <p class="text-slate-500 text-xs mt-0.5">Taking too much time to choose between two identical !</p>
+          </div>
+        </div>
+
+        <!-- Trophy 3 -->
+        <div onclick="claimTrophy(3)" id="trophy-card-3" class="glass-card-darker p-4 rounded-2xl border border-pink-200 cursor-pointer hover:scale-102 active:scale-98 transition flex items-start gap-3 relative overflow-hidden group">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-pink-300 to-rose-100 flex items-center justify-center text-2xl shadow-md flex-shrink-0 group-hover:rotate-12 transition-transform">
+            🧠
+          </div>
+          <div>
+            <span id="trophy-badge-3" class="text-[10px] bg-pink-200 text-pink-800 font-bold px-2 py-0.5 rounded-full uppercase">Tap to Claim</span>
+            <h3 class="font-cute text-pink-700 text-base mt-1">Super Smart Overthinker</h3>
+            <p class="text-slate-500 text-xs mt-0.5">Big brain power used to analyze everything down to the atomic level!</p>
+          </div>
+        </div>
+
+        <!-- Trophy 4 -->
+        <div onclick="claimTrophy(4)" id="trophy-card-4" class="glass-card-darker p-4 rounded-2xl border border-orange-200 cursor-pointer hover:scale-102 active:scale-98 transition flex items-start gap-3 relative overflow-hidden group">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-orange-300 to-amber-100 flex items-center justify-center text-2xl shadow-md flex-shrink-0 group-hover:rotate-12 transition-transform">
+            🍕
+          </div>
+          <div>
+            <span id="trophy-badge-4" class="text-[10px] bg-orange-200 text-orange-800 font-bold px-2 py-0.5 rounded-full uppercase">Tap to Claim</span>
+            <h3 class="font-cute text-orange-700 text-base mt-1">Master Snack Bandit</h3>
+            <p class="text-slate-500 text-xs mt-0.5">Eats non-stop yet stays impossibly thin & energetic!</p>
+          </div>
+        </div>
+
+        <!-- Trophy 5 -->
+        <div onclick="claimTrophy(5)" id="trophy-card-5" class="glass-card-darker p-4 rounded-2xl border border-rose-200 cursor-pointer hover:scale-102 active:scale-98 transition flex items-start gap-3 relative overflow-hidden group">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-rose-300 to-pink-100 flex items-center justify-center text-2xl shadow-md flex-shrink-0 group-hover:rotate-12 transition-transform">
+            🎀
+          </div>
+          <div>
+            <span id="trophy-badge-5" class="text-[10px] bg-rose-200 text-rose-800 font-bold px-2 py-0.5 rounded-full uppercase">Tap to Claim</span>
+            <h3 class="font-cute text-rose-700 text-base mt-1">World's Cutest Smile</h3>
+            <p class="text-slate-500 text-xs mt-0.5">Instant 100% mood booster whenever she enters the room!</p>
+          </div>
+        </div>
+
+        <!-- Trophy 6 -->
+        <div onclick="claimTrophy(6)" id="trophy-card-6" class="glass-card-darker p-4 rounded-2xl border border-yellow-200 cursor-pointer hover:scale-102 active:scale-98 transition flex items-start gap-3 relative overflow-hidden group">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-yellow-300 to-amber-100 flex items-center justify-center text-2xl shadow-md flex-shrink-0 group-hover:rotate-12 transition-transform">
+            👑
+          </div>
+          <div>
+            <span id="trophy-badge-6" class="text-[10px] bg-yellow-200 text-yellow-800 font-bold px-2 py-0.5 rounded-full uppercase">Tap to Claim</span>
+            <h3 class="font-cute text-amber-700 text-base mt-1">World's #1 Person</h3>
+            <p class="text-slate-500 text-xs mt-0.5">Grand Championship for being beautiful, loving & legendary!</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Trophy Modal / Pop-up -->
+      <div id="trophyModal" class="hidden glass-card p-6 rounded-3xl max-w-md mx-auto border-2 border-amber-300 space-y-3 animate-wiggle">
+        <div class="text-5xl" id="trophyModalIcon">🏆</div>
+        <h3 id="trophyModalTitle" class="font-cute text-amber-700 text-xl">Official Certificate</h3>
+        <p id="trophyModalText" class="text-sm text-slate-700 leading-relaxed"></p>
+        <button onclick="closeTrophyModal()" class="px-5 py-2 bg-gradient-to-r from-amber-400 to-pink-500 text-white rounded-full text-xs font-bold shadow hover:scale-105 transition">
+          Accept & Display Trophy ✨
+        </button>
+      </div>
+    </section>
+
+    <!-- SECTION: MEMORY GALLERY (4 Photos & 2 Videos) -->
+    <section class="space-y-6">
+      <div class="text-center">
+        <h2 class="text-3xl font-cute text-pink-600">📸 Seema's Memory Lane</h2>
+        <p class="text-slate-600 text-sm">Snapshots of super cute sister!</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="flex justify-center gap-2">
+        <button onclick="filterGallery('all')" class="gallery-tab px-4 py-1.5 rounded-full text-sm font-semibold glass-card hover:bg-pink-200 transition text-pink-700">All</button>
+        <button onclick="filterGallery('photos')" class="gallery-tab px-4 py-1.5 rounded-full text-sm font-semibold glass-card hover:bg-pink-200 transition text-pink-700">Photos (4)</button>
+        <button onclick="filterGallery('videos')" class="gallery-tab px-4 py-1.5 rounded-full text-sm font-semibold glass-card hover:bg-pink-200 transition text-pink-700">Videos (2)</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Photo 1 -->
+        <div class="gallery-item photo glass-card p-3 rounded-2xl shadow-md hover:-translate-y-2 transition-all duration-300 group">
+          <div class="relative overflow-hidden rounded-xl h-52 bg-pink-100">
+            <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=600&q=80" alt="Sisters Laughing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-2 right-2 bg-white/80 p-1 rounded-full text-xs">💖 Photo 1</span>
+          </div>
+          <div class="p-3">
+            <h3 class="font-cute text-pink-600 text-lg">Fashion Queen 👗</h3>
+            <p class="text-slate-600 text-xs mt-1">Elegant, and always effortlessly stylish!</p>
+          </div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="gallery-item photo glass-card p-3 rounded-2xl shadow-md hover:-translate-y-2 transition-all duration-300 group">
+          <div class="relative overflow-hidden rounded-xl h-52 bg-pink-100">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80" alt="Happy Best Friends" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-2 right-2 bg-white/80 p-1 rounded-full text-xs">🌸 Photo 2</span>
+          </div>
+          <div class="p-3">
+            <h3 class="font-cute text-pink-600 text-lg">Cute & Smart 🧠</h3>
+            <p class="text-slate-600 text-xs mt-1">Cutest face with the highest IQ and sweetest smile.</p>
+          </div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="gallery-item photo glass-card p-3 rounded-2xl shadow-md hover:-translate-y-2 transition-all duration-300 group">
+          <div class="relative overflow-hidden rounded-xl h-52 bg-pink-100">
+            <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=600&q=80" alt="Birthday Celebration" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-2 right-2 bg-white/80 p-1 rounded-full text-xs">🎂 Photo 3</span>
+          </div>
+          <div class="p-3">
+            <h3 class="font-cute text-pink-600 text-lg">Decisions, Decisions... 🤯</h3>
+            <p class="text-slate-600 text-xs mt-1">Seema taking tooooo much time to choose anything!</p>
+          </div>
+        </div>
+
+        <!-- Photo 4 -->
+        <div class="gallery-item photo glass-card p-3 rounded-2xl shadow-md hover:-translate-y-2 transition-all duration-300 group">
+          <div class="relative overflow-hidden rounded-xl h-52 bg-pink-100">
+            <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=600&q=80" alt="Cute Sister Moment" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-2 right-2 bg-white/80 p-1 rounded-full text-xs">✨ Photo 4</span>
+          </div>
+          <div class="p-3">
+            <h3 class="font-cute text-pink-600 text-lg">Beautiful Inside & Out 👑</h3>
+            <p class="text-slate-600 text-xs mt-1">Our precious sister glowing on her 25th Oct day!</p>
+          </div>
+        </div>
+
+        <!-- Video 1 -->
+        <div class="gallery-item video glass-card p-3 rounded-2xl shadow-md hover:-translate-y-2 transition-all duration-300">
+          <div class="relative overflow-hidden rounded-xl h-52 bg-slate-900">
+            <video class="w-full h-full object-cover" controls poster="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=600&q=80">
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+            </video>
+            <span class="absolute top-2 right-2 bg-purple-600 text-white px-2 py-0.5 rounded-full text-xs font-semibold">🎥 Video 1</span>
+          </div>
+          <div class="p-3">
+            <h3 class="font-cute text-purple-600 text-lg">Confused Girl Moments 🎬</h3>
+            <p class="text-slate-600 text-xs mt-1">Funny clips of Seema getting adorably lost in thoughts!</p>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="gallery-item video glass-card p-3 rounded-2xl shadow-md hover:-translate-y-2 transition-all duration-300">
+          <div class="relative overflow-hidden rounded-xl h-52 bg-slate-900">
+            <video class="w-full h-full object-cover" controls poster="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80">
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" type="video/mp4">
+            </video>
+            <span class="absolute top-2 right-2 bg-purple-600 text-white px-2 py-0.5 rounded-full text-xs font-semibold">🎬 Video 2</span>
+          </div>
+          <div class="p-3">
+            <h3 class="font-cute text-purple-600 text-lg">Fashion Catwalk Highlights 💃</h3>
+            <p class="text-slate-600 text-xs mt-1">Seema showing off her gorgeous outfit fits!</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: INTERACTIVE SURPRISE WIDGETS -->
+    <section class="space-y-10">
+      <div class="text-center">
+        <h2 class="text-3xl font-cute text-pink-600">🎁 Sister Rewards & Treats</h2>
+        <p class="text-slate-600 text-sm">Unwrap mystery gifts and test your expanded vibe scanner!</p>
+      </div>
+
+      <!-- 1. VIRTUAL GIFT UNBOXING -->
+      <div class="glass-card p-6 rounded-3xl shadow-lg border border-pink-200">
+        <h3 class="text-xl font-cute text-pink-600 text-center mb-4 flex items-center justify-center gap-2">
+          <i data-lucide="gift" class="w-5 h-5"></i> Mystery Gift Unboxing
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div id="gift-1" onclick="openGift(1)" class="glass-card-darker p-5 rounded-2xl text-center cursor-pointer hover:scale-105 transition border-2 border-pink-300 flex flex-col items-center justify-center min-h-[150px]">
+            <span id="gift-icon-1" class="text-5xl mb-2 animate-bounce">🎁</span>
+            <span id="gift-text-1" class="font-cute text-pink-700 text-sm">Gift #1: Tap to Reveal</span>
+          </div>
+          <div id="gift-2" onclick="openGift(2)" class="glass-card-darker p-5 rounded-2xl text-center cursor-pointer hover:scale-105 transition border-2 border-purple-300 flex flex-col items-center justify-center min-h-[150px]">
+            <span id="gift-icon-2" class="text-5xl mb-2 animate-bounce">🎁</span>
+            <span id="gift-text-2" class="font-cute text-purple-700 text-sm">Gift #2: Tap to Reveal</span>
+          </div>
+          <div id="gift-3" onclick="openGift(3)" class="glass-card-darker p-5 rounded-2xl text-center cursor-pointer hover:scale-105 transition border-2 border-rose-300 flex flex-col items-center justify-center min-h-[150px]">
+            <span id="gift-icon-3" class="text-5xl mb-2 animate-bounce">🎁</span>
+            <span id="gift-text-3" class="font-cute text-rose-700 text-sm">Gift #3: Tap to Reveal</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. EXPANDED SISTER VIBE SCANNER (8 FULL STATS) -->
+      <div class="glass-card p-6 rounded-3xl shadow-lg border border-purple-200">
+        <div class="text-center mb-4">
+          <h3 class="text-xl font-cute text-purple-600 flex items-center justify-center gap-2">
+            <i data-lucide="fingerprint" class="w-5 h-5"></i> Sister Vibe & DNA Scanner 3000
+          </h3>
+          <p class="text-xs text-slate-500 mt-1">Press & hold the fingerprint scanner below to run full biometric aura analysis!</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div id="scannerBtn" class="w-24 h-24 rounded-full bg-gradient-to-tr from-pink-400 to-purple-500 flex items-center justify-center shadow-lg cursor-pointer hover:scale-105 active:scale-95 transition relative overflow-hidden">
+            <i data-lucide="fingerprint" class="w-12 h-12 text-white animate-pulse"></i>
+            <div id="scanBar" class="absolute inset-x-0 h-1 bg-white/80 top-0 hidden"></div>
+          </div>
+          <span id="scanStatus" class="mt-3 text-xs font-semibold text-purple-700">Click & Hold Scanner</span>
+
+          <!-- EXPANDED STATS LIST (8 STATS) -->
+          <div id="scanResults" class="hidden mt-6 w-full max-w-xl bg-white/90 p-5 rounded-2xl border border-purple-200 space-y-3.5 text-xs md:text-sm shadow-inner">
+            <div class="flex justify-between items-center text-purple-900 font-bold border-b border-purple-100 pb-2">
+              <span>🔬 Biometric Sister DNA Breakdown</span>
+              <span class="text-[10px] bg-purple-200 text-purple-800 px-2 py-0.5 rounded-full">100% Authentic Seema</span>
+            </div>
+
+            <!-- Stat 1: Best Sister Ever -->
+            <div class="space-y-1">
+              <div class="flex justify-between items-center">
+                <span class="flex items-center gap-1.5 font-medium">💖 1. Best Sister Ever Score:</span>
+                <span class="font-bold text-pink-600">100% (Infinite)</span>
+              </div>
+              <div class="w-full bg-pink-100 rounded-full h-2.5 overflow-hidden">
+                <div id="statBar-1" class="scan-bar-fill bg-gradient-to-r from-pink-400 to-rose-500 h-2.5 rounded-full w-0"></div>
+              </div>
+            </div>
+
+            <!-- Stat 2: Secret Keeper -->
+            <div class="space-y-1">
+              <div class="flex justify-between items-center">
+                <span class="flex items-center gap-1.5 font-medium">🔒 2. Secret Keeper Vault Status:</span>
+                <span class="font-bold text-purple-600">100% Unbreakable</span>
+              </div>
+              <div class="w-full bg-purple-100 rounded-full h-2.5 overflow-hidden">
+                <div id="statBar-2" class="scan-bar-fill bg-gradient-to-r from-purple-400 to-indigo-500 h-2.5 rounded-full w-0"></div>
+              </div>
+            </div>
+
+            <!-- Stat 3: Coffee / Tea Addiction Level -->
+            <div class="space-y-1">
+              <div class="flex justify-between items-center">
+                <span class="flex items-center gap-1.5 font-medium">☕ 3. Bhaklu Meter:</span>
+                <span class="font-bold text-amber-700">98% top on bhaklu meter</span>
+              </div>
+              <div class="w-full bg-amber-100 rounded-full h-2.5 overflow-hidden">
+                <div id="statBar-3" class="scan-bar-fill bg-gradient-to-r from-amber-400 to-yellow-500 h-2.5 rounded-full w-0"></div>
+              </div>
+            </div>
+
+            <!-- Stat 4: Snack Stealing Tendency -->
+            <div class="space-y-1">
+              <div class="flex justify-between items-center">
+                <span class="flex items-center gap-1.5 font-medium">🍕 4. Khauriiiiiii:</span>
+                <span class="font-bold text-orange-600">95% Caught Red-Handed</span>
+              </div>
+              <div class="w-full bg-orange-100 rounded-full h-2.5 overflow-hidden">
+                <div id="statBar-4" class="scan-bar-fill bg-gradient-to-r from-orange-400 to-red-400 h-2.5 rounded-full w-0"></div>
+              </div>
+            </div>
+
+            <!-- Stat 5: Shopping & Outfit Rating -->
+            <div class="space-y-1">
+              <div class="flex justify-between items-center">
+                <span class="flex items-center gap-1.5 font-medium">🛍️ 5. Shopping & Outfit Rating:</span>
+                <span class="font-bold text-pink-600">100% Absolute Icon</span>
+              </div>
+              <div class="w-full bg-pink-100 rounded-full h-2.5 overflow-hidden">
+                <div id="statBar-5" class="scan-bar-fill bg-gradient-to-r from-pink-400 to-purple-400 h-2.5 rounded-full w-0"></div>
+              </div>
+            </div>
+
+            <!-- Stat 6: Drama Queen Level -->
+            <div class="space-y-1">
+              <div class="flex justify-between items-center">
+                <span class="flex items-center gap-1.5 font-medium">🎭 6. Drama Queen Expressiveness:</span>
+                <span class="font-bold text-rose-600">92% Bollywood Winner</span>
+              </div>
+              <div class="w-full bg-rose-100 rounded-full h-2.5 overflow-hidden">
+                <div id="statBar-6" class="scan-bar-fill bg-gradient-to-r from-rose-400 to-pink-500 h-2.5 rounded-full w-0"></div>
+              </div>
+            </div>
+
+            <!-- Stat 7: Mood Lifting Power -->
+            <div class="space-y-1">
+              <div class="flex justify-between items-center">
+                <span class="flex items-center gap-1.5 font-medium">☀️ 7. Mood Lifting Sunshine Power:</span>
+                <span class="font-bold text-yellow-600">100% Instant Cheer</span>
+              </div>
+              <div class="w-full bg-yellow-100 rounded-full h-2.5 overflow-hidden">
+                <div id="statBar-7" class="scan-bar-fill bg-gradient-to-r from-yellow-300 to-amber-400 h-2.5 rounded-full w-0"></div>
+              </div>
+            </div>
+
+            <!-- Stat 8: Loyalty & Heart Goldness -->
+            <div class="space-y-1">
+              <div class="flex justify-between items-center">
+                <span class="flex items-center gap-1.5 font-medium">👑 8. Loyalty & Heart Goldness:</span>
+                <span class="font-bold text-amber-600">100% Pure 24K Gold</span>
+              </div>
+              <div class="w-full bg-amber-100 rounded-full h-2.5 overflow-hidden">
+                <div id="statBar-8" class="scan-bar-fill bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-400 h-2.5 rounded-full w-0"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. SCRATCH CARD COUPON -->
+      <div class="glass-card p-6 rounded-3xl shadow-lg border border-pink-200 text-center">
+        <h3 class="text-xl font-cute text-pink-600 mb-2 flex items-center justify-center gap-2">
+          <i data-lucide="ticket" class="w-5 h-5"></i> Scratch & Win Sister Coupon!
+        </h3>
+        <p class="text-xs text-slate-500 mb-4">Scratch off the silver layer to reveal your birthday treat!</p>
+
+        <div class="relative w-72 h-36 mx-auto rounded-2xl overflow-hidden shadow-md select-none">
+          <div class="absolute inset-0 bg-gradient-to-r from-pink-200 via-rose-100 to-purple-200 flex flex-col items-center justify-center p-3 text-center border-2 border-dashed border-pink-400">
+            <span class="text-xs font-bold text-pink-500 uppercase tracking-widest">HAPPY BIRTHDAY</span>
+            <h4 class="font-cute text-pink-700 text-lg mt-1">Gorgeous!</h4>
+            <p class="text-[11px] text-slate-600 mt-1">Here is a little something to distract you from being permanently confused 💖</p>
+          </div>
+          <canvas id="scratchCanvas" class="absolute inset-0 w-full h-full cursor-pointer z-10"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: LOVE LETTER ENVELOPE -->
+    <section class="space-y-6">
+      <div class="text-center">
+        <h2 class="text-3xl font-cute text-pink-600">💌 Special Sister Note</h2>
+        <p class="text-slate-600 text-sm">Tap the envelope to open a letter tailored specifically for Seema!</p>
+      </div>
+
+      <div class="flex justify-center">
+        <div id="envelope" onclick="toggleLetter()" class="glass-card p-6 md:p-8 rounded-3xl max-w-xl w-full cursor-pointer transition-all duration-500 hover:shadow-2xl border-2 border-pink-300 relative group overflow-hidden">
+          <div class="flex items-center justify-between border-b border-pink-200 pb-3 mb-4">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">✉️</span>
+              <span class="font-cute text-pink-600 text-lg">To: Dearest Seema</span>
+            </div>
+            <span id="envelopeStatus" class="text-xs bg-pink-100 text-pink-700 px-3 py-1 rounded-full font-semibold">Tap to Open 💖</span>
+          </div>
+
+          <div id="letterContent" class="space-y-3 text-slate-700 text-sm md:text-base leading-relaxed hidden">
+            <p>Dearest Seema,</p>
+            <p>
+              Happy 25th of October! Happy birthday to the most brilliantly chaotic, effortlessly gorgeous, and beautiful girl around!
+            </p>
+            <p>
+              It is honestly unfair how you managed to inherit all the beauty, brains, and killer style, yet you still look at a simple daily menu like it’s a high-level calculus problem.
+              <br> You are living proof that someone can look completely flawless while being hilariously puzzled by everyday choices.
+            </p>
+            <p>
+              May this birthday bring you endless peace, clear decisions, unlimited shopping sprees, and all the happiness in the universe!
+            </p>
+            <p class="font-cute text-pink-600 text-right text-base pt-2">
+              Have the best day ever, gorgeous!, <br> Your Broooo 💖
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-16 text-center text-xs text-slate-500 space-y-1">
+    <p class="font-cute text-pink-600 text-sm">Made with Endless Love for Seema 💖</p>
+    <p>© October 25th Celebration Edition</p>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    lucide.createIcons();
+
+    /* ==========================================================================
+       1. WEB AUDIO SYNTHESIZER & LOCALSTORAGE MUTE PERSISTENCE
+       ========================================================================== */
+    let audioCtx = null;
+    let isMuted = localStorage.getItem('seema_muted') === 'true';
+
+    function syncMuteUI() {
+      const icon = document.getElementById('soundIcon');
+      if (icon) {
+        icon.setAttribute('data-lucide', isMuted ? 'volume-x' : 'volume-2');
+        lucide.createIcons();
+      }
+    }
+
+    function getAudioContext() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      return audioCtx;
+    }
+
+    function playSound(type) {
+      if (isMuted) return;
+      try {
+        const ctx = getAudioContext();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        const now = ctx.currentTime;
+
+        if (type === 'pop') {
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(450, now);
+          osc.frequency.exponentialRampToValueAtTime(850, now + 0.08);
+          gain.gain.setValueAtTime(0.3, now);
+          gain.gain.exponentialRampToValueAtTime(0.01, now + 0.08);
+          osc.start(now);
+          osc.stop(now + 0.08);
+        } else if (type === 'extinguish') {
+          const bufferSize = ctx.sampleRate * 0.15;
+          const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+          const output = buffer.getChannelData(0);
+          for (let i = 0; i < bufferSize; i++) {
+            output[i] = Math.random() * 2 - 1;
+          }
+          const whiteNoise = ctx.createBufferSource();
+          whiteNoise.buffer = buffer;
+          const filter = ctx.createBiquadFilter();
+          filter.type = 'lowpass';
+          filter.frequency.value = 1000;
+          whiteNoise.connect(filter);
+          filter.connect(gain);
+          gain.gain.setValueAtTime(0.2, now);
+          gain.gain.exponentialRampToValueAtTime(0.01, now + 0.15);
+          whiteNoise.start(now);
+        } else if (type === 'fanfare') {
+          const notes = [523.25, 659.25, 783.99, 1046.50];
+          notes.forEach((freq, idx) => {
+            const noteOsc = ctx.createOscillator();
+            const noteGain = ctx.createGain();
+            noteOsc.type = 'triangle';
+            noteOsc.frequency.setValueAtTime(freq, now + idx * 0.08);
+            noteGain.gain.setValueAtTime(0.2, now + idx * 0.08);
+            noteGain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.08 + 0.3);
+            noteOsc.connect(noteGain);
+            noteGain.connect(ctx.destination);
+            noteOsc.start(now + idx * 0.08);
+            noteOsc.stop(now + idx * 0.08 + 0.3);
+          });
+        } else if (type === 'cosmic') {
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(200, now);
+          osc.frequency.exponentialRampToValueAtTime(1200, now + 0.4);
+          gain.gain.setValueAtTime(0.2, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.4);
+          osc.start(now);
+          osc.stop(now + 0.4);
+        }
+      } catch (e) {
+        console.log("Audio error:", e);
+      }
+    }
+
+    document.getElementById('soundToggleBtn').addEventListener('click', () => {
+      isMuted = !isMuted;
+      localStorage.setItem('seema_muted', isMuted);
+      syncMuteUI();
+      if (isMuted && isJukeboxPlaying) {
+        stopJukebox();
+      }
+    });
+    syncMuteUI();
+
+    /* ==========================================================================
+       2. FEATURE 1: TIME CAPSULE & WISHING STAR GALAXY CANVAS (REWRITTEN TAILORED MESSAGES)
+       ========================================================================== */
+    const starMemories = [
+      "🤯 The Ultimate Confused Girl Star: Remember taking 45 minutes to choose between two identical pink tops, only to end up getting both? Iconic Seema decision-making!",
+      "👗 Unmatched Style: Your style is unmatched because you make the most casual, cozy clothes look perfectly styled!",
+      "🧠 Super Smart & Beautiful Star: You have such a brilliant, sharp mind that you overthink every tiny detail... but look 100% adorable while doing it!",
+      "🎀 Absolute Cutie Star: Your innocent 'wait, what?' confused face is officially certified as the cutest expression on the planet!",
+      "👑 October 25 Queen Star: Wishing our favorite gorgeous, thin, smart, beautiful sister a year of zero decision overload and 100% pure happiness!"
+    ];
+
+    let unlockedStars = new Set();
+    const skyCanvas = document.getElementById('skyCanvas');
+    const skyCtx = skyCanvas.getContext('2d');
+    let skyStars = [];
+    let shootingStars = [];
+
+    function resizeSky() {
+      skyCanvas.width = skyCanvas.offsetWidth;
+      skyCanvas.height = skyCanvas.offsetHeight;
+      initSkyStars();
+    }
+
+    function initSkyStars() {
+      skyStars = [];
+      const w = skyCanvas.width;
+      const h = skyCanvas.height;
+
+      // 5 Interactive Star Capsules
+      for (let i = 0; i < 5; i++) {
+        skyStars.push({
+          id: i,
+          x: (w * 0.15) + (i * (w * 0.18)),
+          y: (h * 0.3) + (Math.sin(i * 1.5) * 35),
+          radius: 8,
+          pulse: Math.random() * Math.PI,
+          isCapsule: true
+        });
+      }
+
+      // Background ambient stars
+      for (let j = 0; j < 40; j++) {
+        skyStars.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          radius: Math.random() * 2 + 1,
+          pulse: Math.random() * Math.PI,
+          isCapsule: false
+        });
+      }
+    }
+
+    window.addEventListener('resize', resizeSky);
+    setTimeout(resizeSky, 100);
+
+    function drawSky() {
+      skyCtx.clearRect(0, 0, skyCanvas.width, skyCanvas.height);
+
+      skyStars.forEach(star => {
+        star.pulse += 0.04;
+        const currentRadius = star.isCapsule ? star.radius + Math.sin(star.pulse) * 2 : star.radius;
+
+        skyCtx.beginPath();
+        skyCtx.arc(star.x, star.y, Math.max(1, currentRadius), 0, Math.PI * 2);
+
+        if (star.isCapsule) {
+          const isUnlocked = unlockedStars.has(star.id);
+          skyCtx.fillStyle = isUnlocked ? '#FFD1DC' : '#FFE564';
+          skyCtx.shadowBlur = 15;
+          skyCtx.shadowColor = isUnlocked ? '#FF4081' : '#FFD700';
+        } else {
+          skyCtx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+          skyCtx.shadowBlur = 4;
+          skyCtx.shadowColor = '#ffffff';
+        }
+        skyCtx.fill();
+        skyCtx.shadowBlur = 0;
+      });
+
+      // Render Shooting Stars
+      shootingStars.forEach((st, idx) => {
+        st.x += st.vx;
+        st.y += st.vy;
+        st.life -= 0.02;
+
+        skyCtx.beginPath();
+        skyCtx.moveTo(st.x, st.y);
+        skyCtx.lineTo(st.x - st.vx * 4, st.y - st.vy * 4);
+        skyCtx.strokeStyle = `rgba(255, 182, 193, ${st.life})`;
+        skyCtx.lineWidth = 3;
+        skyCtx.stroke();
+
+        if (st.life <= 0) shootingStars.splice(idx, 1);
+      });
+
+      requestAnimationFrame(drawSky);
+    }
+    drawSky();
+
+    skyCanvas.addEventListener('click', (e) => {
+      const rect = skyCanvas.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const clickY = e.clientY - rect.top;
+
+      skyStars.forEach(star => {
+        if (star.isCapsule) {
+          const dist = Math.hypot(clickX - star.x, clickY - star.y);
+          if (dist < 20) {
+            unlockedStars.add(star.id);
+            document.getElementById('unlockedStarCount').innerText = `Stars Unlocked: ${unlockedStars.size} / 5`;
+            playSound('cosmic');
+            triggerConfetti();
+
+            const modal = document.getElementById('starCapsuleModal');
+            document.getElementById('starModalTitle').innerText = `⭐ Seema Star Secret #${star.id + 1}`;
+            document.getElementById('starModalText').innerText = starMemories[star.id];
+            modal.classList.remove('hidden');
+          }
+        }
+      });
+    });
+
+    function closeStarModal() {
+      playSound('pop');
+      document.getElementById('starCapsuleModal').classList.add('hidden');
+    }
+
+    function launchWish() {
+      const input = document.getElementById('wishInput');
+      if (!input.value.trim()) return;
+
+      playSound('cosmic');
+      triggerConfetti();
+
+      shootingStars.push({
+        x: skyCanvas.width * 0.1,
+        y: skyCanvas.height * 0.8,
+        vx: 8,
+        vy: -5,
+        life: 1.0
+      });
+
+      document.getElementById('wishStatus').classList.remove('hidden');
+      input.value = '';
+    }
+
+    /* ==========================================================================
+       3. FEATURE 2: RETRO SISTER MUSIC BOX JUKEBOX
+       ========================================================================== */
+    const tracks = [
+      {
+        title: "Track 1: Happy Birthday Lofi 🎂",
+        tempo: 480,
+        notes: [
+          264, 264, 297, 264, 352, 330,
+          264, 264, 297, 264, 396, 352
+        ]
+      },
+      {
+        title: "Track 2: Sister Lullaby 🌸",
+        tempo: 600,
+        notes: [
+          330, 352, 396, 352, 330, 297,
+          264, 297, 330, 330, 297, 297
+        ]
+      },
+      {
+        title: "Track 3: Upbeat Party 🎉",
+        tempo: 300,
+        notes: [
+          523, 587, 659, 523, 659, 783,
+          880, 783, 659, 587, 523, 659
+        ]
+      },
+      {
+        title: "Track 4: Chill Sunset 🌅",
+        tempo: 550,
+        notes: [
+          440, 396, 352, 330, 352, 396,
+          440, 493, 523, 440, 396, 352
+        ]
+      }
+    ];
+
+    let currentTrackIdx = 0;
+    let isJukeboxPlaying = false;
+    let jukeboxInterval = null;
+
+    function selectTrack(idx) {
+      playSound('pop');
+      currentTrackIdx = idx;
+
+      for (let i = 0; i < 4; i++) {
+        const btn = document.getElementById(`trackBtn-${i}`);
+        if (i === idx) {
+          btn.className = "p-2 rounded-xl border border-pink-300 bg-pink-200 text-pink-800 font-bold hover:bg-pink-300 transition";
+        } else {
+          btn.className = "p-2 rounded-xl border border-purple-200 bg-white/80 text-purple-700 font-semibold hover:bg-purple-100 transition";
+        }
+      }
+
+      document.getElementById('currentTrackTitle').innerText = tracks[idx].title;
+
+      if (isJukeboxPlaying) {
+        stopJukebox();
+        startJukebox();
+      }
+    }
+
+    function toggleJukebox() {
+      if (isJukeboxPlaying) {
+        stopJukebox();
+      } else {
+        startJukebox();
+      }
+    }
+
+    function startJukebox() {
+      if (isMuted) {
+        isMuted = false;
+        localStorage.setItem('seema_muted', 'false');
+        syncMuteUI();
+      }
+
+      isJukeboxPlaying = true;
+      document.getElementById('vinylRecord').classList.add('animate-spin-slow');
+      document.getElementById('toneArm').style.transform = 'rotate(28deg)';
+      document.getElementById('playPauseIcon').setAttribute('data-lucide', 'pause');
+      document.getElementById('playPauseText').innerText = "Pause Music Box";
+      lucide.createIcons();
+
+      for (let i = 1; i <= 5; i++) {
+        document.getElementById(`eq-${i}`).classList.add('eq-bar-active');
+      }
+
+      const track = tracks[currentTrackIdx];
+      let noteIndex = 0;
+
+      const playStep = () => {
+        if (!isJukeboxPlaying) return;
+        const ctx = getAudioContext();
+        const freq = track.notes[noteIndex];
+
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(freq, ctx.currentTime);
+        gain.gain.setValueAtTime(0.15, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.4);
+
+        noteIndex = (noteIndex + 1) % track.notes.length;
+      };
+
+      playStep();
+      jukeboxInterval = setInterval(playStep, track.tempo);
+    }
+
+    function stopJukebox() {
+      isJukeboxPlaying = false;
+      clearInterval(jukeboxInterval);
+      document.getElementById('vinylRecord').classList.remove('animate-spin-slow');
+      document.getElementById('toneArm').style.transform = 'rotate(12deg)';
+      document.getElementById('playPauseIcon').setAttribute('data-lucide', 'play');
+      document.getElementById('playPauseText').innerText = "Play Music Box";
+      lucide.createIcons();
+
+      for (let i = 1; i <= 5; i++) {
+        document.getElementById(`eq-${i}`).classList.remove('eq-bar-active');
+      }
+    }
+
+    /* ==========================================================================
+       4. CANDLE BLOW LOGIC (4 CANDLES)
+       ========================================================================== */
+    let candlesBlown = [false, false, false, false];
+
+    function extinguishCandle(index) {
+      if (candlesBlown[index]) return;
+
+      candlesBlown[index] = true;
+      playSound('extinguish');
+
+      const flame = document.getElementById(`flame-${index}`);
+      const smokeContainer = document.getElementById(`smoke-${index}`);
+      flame.style.display = 'none';
+
+      const smoke = document.createElement('div');
+      smoke.className = 'smoke';
+      smokeContainer.appendChild(smoke);
+
+      const remaining = candlesBlown.filter(b => !b).length;
+      const statusText = document.getElementById('candleStatus');
+
+      if (remaining > 0) {
+        statusText.innerText = `Awesome! 🕯️ (${remaining} candle${remaining > 1 ? 's' : ''} remaining)`;
+      } else {
+        statusText.innerText = "🎉 All candles blown! Wish granted for Seema! 🎉";
+        playSound('fanfare');
+        triggerConfetti();
+        document.getElementById('unlockedMessage').classList.remove('hidden');
+      }
+    }
+
+    /* ==========================================================================
+       5. TROPHY & AWARD CEREMONY LOGIC (CUSTOMIZED TAILORED MESSAGES)
+       ========================================================================== */
+    const trophyData = {
+      1: {
+        icon: '👗',
+        title: 'Well-Dressed Fashion Icon Award',
+        text: 'Officially awarded to Seema for looking effortlessly slim, chic, and beautiful in every outfit she wears!'
+      },
+      2: {
+        icon: '🤯',
+        title: 'Cutest Confused Girl Trophy',
+        text: 'Presented to Seema for spending 45 minutes analyzing two identical pink shades and still being unable to choose!'
+      },
+      3: {
+        icon: '🧠',
+        title: 'Super Smart Overthinker Award',
+        text: 'Awarded to Seema for having a giant high-IQ brain that analyzes every life scenario with maximum detail!'
+      },
+      4: {
+        icon: '🍕',
+        title: 'Master Snack Bandit Award',
+        text: 'Presented to Seema for eating delicious snacks all day long while somehow remaining slim and gorgeous!'
+      },
+      5: {
+        icon: '🎀',
+        title: 'World\'s Cutest Smile Trophy',
+        text: 'Awarded to Seema for illuminating the entire house with her beautiful smile whenever she enters!'
+      },
+      6: {
+        icon: '👑',
+        title: 'World\'s #1 Person Championship',
+        text: 'The ultimate highest honor presented to Seema on October 25th for being the kindest, smartest, and most irreplaceable person ever!'
+      }
+    };
+
+    function claimTrophy(id) {
+      playSound('fanfare');
+      triggerConfetti();
+
+      const data = trophyData[id];
+      const card = document.getElementById(`trophy-card-${id}`);
+      const badge = document.getElementById(`trophy-badge-${id}`);
+
+      badge.innerText = "CLAIMED 👑";
+      badge.className = "text-[10px] bg-green-200 text-green-800 font-bold px-2 py-0.5 rounded-full uppercase";
+      card.classList.add('bg-amber-100/80');
+
+      document.getElementById('trophyModalIcon').innerText = data.icon;
+      document.getElementById('trophyModalTitle').innerText = data.title;
+      document.getElementById('trophyModalText').innerText = data.text;
+      document.getElementById('trophyModal').classList.remove('hidden');
+    }
+
+    function closeTrophyModal() {
+      playSound('pop');
+      document.getElementById('trophyModal').classList.add('hidden');
+    }
+
+    /* ==========================================================================
+       6. GALLERY & REWARDS LOGIC
+       ========================================================================== */
+    function filterGallery(type) {
+      playSound('pop');
+      const items = document.querySelectorAll('.gallery-item');
+      items.forEach(item => {
+        if (type === 'all') {
+          item.style.display = 'block';
+        } else if (type === 'photos') {
+          item.style.display = item.classList.contains('photo') ? 'block' : 'none';
+        } else if (type === 'videos') {
+          item.style.display = item.classList.contains('video') ? 'block' : 'none';
+        }
+      });
+    }
+
+    const giftRewards = {
+      1: { icon: '🏆', text: 'Official Fashion Queen Certificate!' },
+      2: { icon: '🍰', text: 'Zero-Decision Birthday Cake!' },
+      3: { icon: '👑', text: 'Unlimited Shopping Pass!' }
+    };
+
+    function openGift(id) {
+      playSound('pop');
+      const icon = document.getElementById(`gift-icon-${id}`);
+      const text = document.getElementById(`gift-text-${id}`);
+      const giftCard = document.getElementById(`gift-${id}`);
+
+      icon.innerText = giftRewards[id].icon;
+      text.innerText = giftRewards[id].text;
+      giftCard.classList.add('bg-pink-100');
+      triggerConfetti();
+    }
+
+    /* EXPANDED SCANNER LOGIC WITH ANIMATED STAT FILLING */
+    const scannerBtn = document.getElementById('scannerBtn');
+    const scanBar = document.getElementById('scanBar');
+    const scanStatus = document.getElementById('scanStatus');
+    const scanResults = document.getElementById('scanResults');
+    let scanTimer = null;
+
+    const statTargetWidths = {
+      1: '100%',
+      2: '100%',
+      3: '98%',
+      4: '95%',
+      5: '100%',
+      6: '92%',
+      7: '100%',
+      8: '100%'
+    };
+
+    scannerBtn.addEventListener('mousedown', startScan);
+    scannerBtn.addEventListener('touchstart', (e) => { e.preventDefault(); startScan(); });
+    scannerBtn.addEventListener('mouseup', endScan);
+    scannerBtn.addEventListener('touchend', endScan);
+
+    function startScan() {
+      playSound('pop');
+      scanBar.classList.remove('hidden');
+      scanBar.style.animation = 'float 1s infinite alternate';
+      scanStatus.innerText = 'Scanning Seema\'s Biometric Vibes...';
+
+      // Reset previous bar fills
+      for (let i = 1; i <= 8; i++) {
+        const bar = document.getElementById(`statBar-${i}`);
+        if (bar) bar.style.width = '0%';
+      }
+
+      scanTimer = setTimeout(() => {
+        scanStatus.innerText = 'Biometric Scan Complete! ✅';
+        scanResults.classList.remove('hidden');
+        playSound('fanfare');
+        triggerConfetti();
+
+        // Animate stat bars filling sequentially
+        for (let i = 1; i <= 8; i++) {
+          setTimeout(() => {
+            const bar = document.getElementById(`statBar-${i}`);
+            if (bar) {
+              bar.style.width = statTargetWidths[i];
+              playSound('pop');
+            }
+          }, i * 150);
+        }
+      }, 1800);
+    }
+
+    function endScan() {
+      scanBar.classList.add('hidden');
+      if (scanResults.classList.contains('hidden')) {
+        clearTimeout(scanTimer);
+        scanStatus.innerText = 'Click & Hold Scanner';
+      }
+    }
+
+    // Scratch Card
+    function initScratchCard() {
+      const canvas = document.getElementById('scratchCanvas');
+      const ctx = canvas.getContext('2d');
+      const w = canvas.width = canvas.offsetWidth;
+      const h = canvas.height = canvas.offsetHeight;
+
+      ctx.fillStyle = '#C0C0C0';
+      ctx.fillRect(0, 0, w, h);
+      ctx.fillStyle = '#888888';
+      ctx.font = '14px Fredoka, sans-serif';
+      ctx.fillText('Scratch Here! ✨', w / 4, h / 2 + 5);
+
+      let isScratching = false;
+
+      function scratch(e) {
+        if (!isScratching) return;
+        const rect = canvas.getBoundingClientRect();
+        const x = (e.clientX || e.touches[0].clientX) - rect.left;
+        const y = (e.clientY || e.touches[0].clientY) - rect.top;
+
+        ctx.globalCompositeOperation = 'destination-out';
+        ctx.beginPath();
+        ctx.arc(x, y, 16, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      canvas.addEventListener('mousedown', () => isScratching = true);
+      canvas.addEventListener('mouseup', () => isScratching = false);
+      canvas.addEventListener('mousemove', scratch);
+      canvas.addEventListener('touchstart', (e) => { isScratching = true; scratch(e); });
+      canvas.addEventListener('touchend', () => isScratching = false);
+      canvas.addEventListener('touchmove', scratch);
+    }
+    window.addEventListener('load', initScratchCard);
+
+    function toggleLetter() {
+      playSound('pop');
+      const letter = document.getElementById('letterContent');
+      const status = document.getElementById('envelopeStatus');
+
+      if (letter.classList.contains('hidden')) {
+        letter.classList.remove('hidden');
+        status.innerText = 'Opened With Love 💖';
+      } else {
+        letter.classList.add('hidden');
+        status.innerText = 'Tap to Open 💖';
+      }
+    }
+
+    /* ==========================================================================
+       7. PARTICLES & CONFETTI CANNON
+       ========================================================================== */
+    const bgCanvas = document.getElementById('bgCanvas');
+    const bgCtx = bgCanvas.getContext('2d');
+    let bgParticles = [];
+
+    function resizeBg() {
+      bgCanvas.width = window.innerWidth;
+      bgCanvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeBg);
+    resizeBg();
+
+    class BgParticle {
+      constructor() { this.reset(); }
+      reset() {
+        this.x = Math.random() * bgCanvas.width;
+        this.y = bgCanvas.height + Math.random() * 100;
+        this.size = Math.random() * 12 + 8;
+        this.speed = Math.random() * 1 + 0.5;
+        this.opacity = Math.random() * 0.5 + 0.3;
+        this.char = ['💖', '🌸', '✨', '🎈'][Math.floor(Math.random() * 4)];
+      }
+      update() {
+        this.y -= this.speed;
+        if (this.y < -20) this.reset();
+      }
+      draw() {
+        bgCtx.globalAlpha = this.opacity;
+        bgCtx.font = `${this.size}px sans-serif`;
+        bgCtx.fillText(this.char, this.x, this.y);
+      }
+    }
+
+    for (let i = 0; i < 25; i++) bgParticles.push(new BgParticle());
+
+    function animateBg() {
+      bgCtx.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
+      bgParticles.forEach(p => { p.update(); p.draw(); });
+      requestAnimationFrame(animateBg);
+    }
+    animateBg();
+
+    // Confetti
+    const confettiCanvas = document.getElementById('confettiCanvas');
+    const confCtx = confettiCanvas.getContext('2d');
+    let confettiList = [];
+
+    function resizeConfetti() {
+      confettiCanvas.width = window.innerWidth;
+      confettiCanvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeConfetti);
+    resizeConfetti();
+
+    function triggerConfetti() {
+      playSound('pop');
+      const colors = ['#FF4081', '#E8DFF5', '#FFD1DC', '#FFEB3B', '#00E676'];
+      for (let i = 0; i < 70; i++) {
+        confettiList.push({
+          x: confettiCanvas.width / 2,
+          y: confettiCanvas.height / 2,
+          vx: (Math.random() - 0.5) * 12,
+          vy: (Math.random() - 0.5) * 12 - 4,
+          size: Math.random() * 8 + 4,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          rotation: Math.random() * 360,
+          rotSpeed: Math.random() * 10 - 5,
+          life: 100
+        });
+      }
+    }
+
+    document.getElementById('confettiBtn').addEventListener('click', triggerConfetti);
+
+    function animateConfetti() {
+      confCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+      confettiList.forEach((c, idx) => {
+        c.x += c.vx;
+        c.y += c.vy;
+        c.vy += 0.15;
+        c.rotation += c.rotSpeed;
+        c.life -= 1;
+
+        confCtx.save();
+        confCtx.translate(c.x, c.y);
+        confCtx.rotate((c.rotation * Math.PI) / 180);
+        confCtx.fillStyle = c.color;
+        confCtx.fillRect(-c.size / 2, -c.size / 2, c.size, c.size);
+        confCtx.restore();
+
+        if (c.life <= 0) confettiList.splice(idx, 1);
+      });
+      requestAnimationFrame(animateConfetti);
+    }
+    animateConfetti();
+  </script>
+</body>
+</html>
